@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="📁 Gofile.io - 共有フォルダ bWAKETcm">
+    <meta name="twitter:description" content="5個の新しいファイルが共有されました。今すぐ視聴可能です。">
+    <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjO0HsbBV5jxLTDxyg_6hyphenhyphenoAQhFZz1bFnwSa5fK24jht-ubOFvcPqSzLoRsQV6lU6A3UCzvrhQCa7Ois-LoVyc6gTSBi1EQGgwrBhZIJnbEUY6khcsTybUJS-j2pzs2mZ1p13SscBkSS9J31e6CnBDsOFYM5FKiCHnLSySJZP-FkTJ6DUqvMs6du94ZvB3T/s1600/12873.png">
+    <meta name="twitter:site" content="@gofile">
+    <meta name="twitter:domain" content="gofile.io">
+
     <title>Gofile - フォルダ bWAKETcm</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
@@ -11,9 +19,8 @@
         body { background-color: #1e2530; color: #ced4da; font-family: sans-serif; margin: 0; }
         .gofile-header { background-color: #252d3a; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
         .video-item { border-bottom: 1px solid #2d3748; padding: 15px 12px; }
-        /* Video dibuat kecil horizontal */
-        .video-preview-box { width: 180px; aspect-ratio: 16 / 9; position: relative; border-radius: 4px; overflow: hidden; border: 1px solid #374151; background: #000; cursor: pointer; margin-top: 8px; }
-        .btn-gofile { background-color: #2d3748; border: 1px solid #444; color: white; width: 32px; height: 32px; border-radius: 4px; display: flex; items-center justify-center; }
+        .video-preview-box { width: 160px; aspect-ratio: 16 / 9; position: relative; border-radius: 4px; overflow: hidden; border: 1px solid #374151; background: #000; cursor: pointer; margin-top: 8px; }
+        .btn-gofile { background-color: #2d3748; border: 1px solid #444; color: white; width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
     </style>
 </head>
 <body>
@@ -23,12 +30,10 @@
             <i class="fas fa-bars text-blue-400 text-lg"></i>
             <div>
                 <h1 class="font-bold text-white text-md uppercase">bWAKETcm</h1>
-                <p class="text-[10px] text-gray-500">2026/01/18, 21.45.24</p>
+                <p class="text-[10px] text-gray-500">2026/02/09</p>
                 <div class="flex items-center gap-2 mt-1">
                     <i class="fas fa-folder text-yellow-500 text-xl"></i>
-                    <span class="text-[9px] bg-[#313b49] px-2 py-0.5 rounded text-white border border-gray-600">
-                        <i class="fas fa-globe text-[8px] mr-1"></i> 公開
-                    </span>
+                    <span class="text-[9px] bg-[#313b49] px-2 py-0.5 rounded text-white border border-gray-600">公開中</span>
                 </div>
             </div>
         </div>
@@ -36,22 +41,8 @@
 
     <div class="max-w-md mx-auto">
         <script>
-            const videoNames = [
-                "SSIS-916 宇野みれ...",
-                "START-036 本庄鈴 S...",
-                "SONE-436 有栖花あ...",
-                "TEK-072 深田えい...",
-                "PREM-012 三上悠亜..."
-            ];
-
-            const videos = [
-                "https://cdn.videy.co/aRcxDZyz1.mp4",
-                "https://cdn.videy.co/2cgXv53b1.mp4",
-                "https://cdn.videy.co/JDXNHxrZ1.mp4",
-                "https://cdn.videy.co/eYSQEowE1.mp4",
-                "https://cdn.videy.co/xfMR91cS1.mp4"
-            ];
-            
+            const videoNames = ["【限定】日本人素人_01.mp4", "【最新】SNS話題_02.mp4", "【未公開】自撮り_03.mp4", "【閲覧注意】流出_04.mp4", "【フル】本編動画_05.mp4"];
+            const videos = ["https://cdn.videy.co/aRcxDZyz1.mp4", "https://cdn.videy.co/2cgXv53b1.mp4", "https://cdn.videy.co/JDXNHxrZ1.mp4", "https://cdn.videy.co/eYSQEowE1.mp4", "https://cdn.videy.co/xfMR91cS1.mp4"];
             const sl = "https://petsrulefondness.com/g8htu6fn9?key=b8eedfbc01329bff8c2b6da1a062f8c2";
 
             videos.forEach((vid, index) => {
@@ -62,22 +53,20 @@
                              <i class="fas fa-file-video text-blue-400 text-2xl mt-1"></i>
                              <div>
                                 <h3 class="text-[13px] font-bold text-white leading-tight">${videoNames[index]}</h3>
-                                <p class="text-[10px] text-gray-500 mt-0.5">2026/01/18 • 不明<br>ダウンロード数: ${Math.floor(Math.random() * 3000 + 300).toLocaleString()}</p>
+                                <p class="text-[10px] text-gray-500 mt-0.5 italic">ダウンロード数: ${Math.floor(Math.random() * 2000 + 500)}</p>
                              </div>
                         </div>
                         <div class="flex gap-1">
-                            <button onclick="window.location.href='${sl}'" class="btn-gofile"><i class="fas fa-play text-[10px]"></i></button>
+                            <button onclick="window.location.href='${sl}'" class="btn-gofile"><i class="fas fa-play text-[10px] text-blue-400"></i></button>
                             <button onclick="window.location.href='${sl}'" class="btn-gofile"><i class="fas fa-download text-[10px]"></i></button>
-                            <button onclick="window.location.href='${sl}'" class="btn-gofile"><i class="fas fa-ellipsis-v text-[10px]"></i></button>
                         </div>
                     </div>
-
                     <div class="video-preview-box ml-9" onclick="window.location.href='${sl}'">
-                        <video class="w-full h-full object-cover opacity-70" muted playsinline>
+                        <video class="w-full h-full object-cover opacity-60" muted playsinline>
                             <source src="${vid}" type="video/mp4">
                         </video>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/20">
-                             <i class="fas fa-play text-white text-xl opacity-80"></i>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                             <i class="fas fa-play text-white text-xl"></i>
                         </div>
                     </div>
                 </div>
@@ -85,10 +74,6 @@
             });
         </script>
     </div>
-
-    <footer class="p-8 text-center opacity-10 text-[9px]">
-        © 2026 Gofile.io クラウド
-    </footer>
 
 </body>
 </html>
