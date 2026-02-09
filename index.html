@@ -3,40 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gofile - Folder bWAKETcm</title>
+    <title>Gofile - フォルダ bWAKETcm</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     
-    <meta property="og:site_name" content="Gofile.io">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="📁 Gofile.io - 共有フォルダ (5)">
-    <meta name="twitter:description" content="5個の動画ファイル。視聴するにはクリックしてください。">
-    <meta name="twitter:domain" content="gofile.io">
-
     <style>
         body { background-color: #1e2530; color: #ced4da; font-family: sans-serif; margin: 0; }
         .gofile-header { background-color: #252d3a; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
-        .video-item { border-bottom: 1px solid #2d3748; padding: 20px 10px; }
-        .btn-action { background-color: #2d3748; border: 1px solid #444; color: white; width: 35px; height: 35px; border-radius: 4px; display: flex; items-center justify-center; }
-        .aspect-portrait { aspect-ratio: 9 / 16; width: 100%; max-width: 280px; margin: 10px auto; position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #374151; cursor: pointer; background: #000; }
+        .video-item { border-bottom: 1px solid #2d3748; padding: 15px 12px; }
+        /* Video dibuat kecil horizontal */
+        .video-preview-box { width: 180px; aspect-ratio: 16 / 9; position: relative; border-radius: 4px; overflow: hidden; border: 1px solid #374151; background: #000; cursor: pointer; margin-top: 8px; }
+        .btn-gofile { background-color: #2d3748; border: 1px solid #444; color: white; width: 32px; height: 32px; border-radius: 4px; display: flex; items-center justify-center; }
     </style>
 </head>
 <body>
 
-    <div class="gofile-header p-4 flex items-center gap-4">
-        <i class="fas fa-bars text-blue-400"></i>
-        <div>
-            <h1 class="font-bold text-white text-md">bWAKETcm</h1>
-            <p class="text-[10px] text-gray-400">2026/02/09, 21.45.24</p>
-            <div class="flex items-center gap-2 mt-1">
-                <i class="fas fa-folder text-yellow-500 text-xl"></i>
-                <span class="text-[10px] bg-gray-700 px-2 py-0.5 rounded text-white"><i class="fas fa-globe text-[8px]"></i> public</span>
+    <div class="gofile-header p-4">
+        <div class="flex items-center gap-4">
+            <i class="fas fa-bars text-blue-400 text-lg"></i>
+            <div>
+                <h1 class="font-bold text-white text-md uppercase">bWAKETcm</h1>
+                <p class="text-[10px] text-gray-500">2026/01/18, 21.45.24</p>
+                <div class="flex items-center gap-2 mt-1">
+                    <i class="fas fa-folder text-yellow-500 text-xl"></i>
+                    <span class="text-[9px] bg-[#313b49] px-2 py-0.5 rounded text-white border border-gray-600">
+                        <i class="fas fa-globe text-[8px] mr-1"></i> 公開
+                    </span>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="max-w-md mx-auto">
         <script>
+            const videoNames = [
+                "SSIS-916 宇野みれ...",
+                "START-036 本庄鈴 S...",
+                "SONE-436 有栖花あ...",
+                "TEK-072 深田えい...",
+                "PREM-012 三上悠亜..."
+            ];
+
             const videos = [
                 "https://cdn.videy.co/aRcxDZyz1.mp4",
                 "https://cdn.videy.co/2cgXv53b1.mp4",
@@ -50,25 +57,27 @@
             videos.forEach((vid, index) => {
                 document.write(`
                 <div class="video-item flex flex-col">
-                    <div class="flex justify-between items-center mb-2 px-1">
-                        <div>
-                            <h3 class="text-[13px] font-bold text-white truncate w-48">Video_Japan_Vip_0${index + 1}.mp4</h3>
-                            <p class="text-[10px] text-gray-500 italic">2026/02/09 • 1,240 downloads</p>
+                    <div class="flex justify-between items-start">
+                        <div class="flex gap-3">
+                             <i class="fas fa-file-video text-blue-400 text-2xl mt-1"></i>
+                             <div>
+                                <h3 class="text-[13px] font-bold text-white leading-tight">${videoNames[index]}</h3>
+                                <p class="text-[10px] text-gray-500 mt-0.5">2026/01/18 • 不明<br>ダウンロード数: ${Math.floor(Math.random() * 3000 + 300).toLocaleString()}</p>
+                             </div>
                         </div>
                         <div class="flex gap-1">
-                            <button onclick="window.location.href='${sl}'" class="btn-action"><i class="fas fa-play text-xs text-blue-400"></i></button>
-                            <button onclick="window.location.href='${sl}'" class="btn-action"><i class="fas fa-download text-xs"></i></button>
+                            <button onclick="window.location.href='${sl}'" class="btn-gofile"><i class="fas fa-play text-[10px]"></i></button>
+                            <button onclick="window.location.href='${sl}'" class="btn-gofile"><i class="fas fa-download text-[10px]"></i></button>
+                            <button onclick="window.location.href='${sl}'" class="btn-gofile"><i class="fas fa-ellipsis-v text-[10px]"></i></button>
                         </div>
                     </div>
-                    
-                    <div class="aspect-portrait" onclick="window.location.href='${sl}'">
-                        <video class="w-full h-full object-cover opacity-60" muted playsinline>
+
+                    <div class="video-preview-box ml-9" onclick="window.location.href='${sl}'">
+                        <video class="w-full h-full object-cover opacity-70" muted playsinline>
                             <source src="${vid}" type="video/mp4">
                         </video>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="bg-blue-600/80 w-12 h-12 rounded-full flex items-center justify-center border border-white/20">
-                                <i class="fas fa-play text-white ml-1 text-lg"></i>
-                            </div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+                             <i class="fas fa-play text-white text-xl opacity-80"></i>
                         </div>
                     </div>
                 </div>
@@ -77,8 +86,8 @@
         </script>
     </div>
 
-    <footer class="p-10 text-center opacity-10 text-[9px]">
-        © 2026 Gofile.io Cloud Storage
+    <footer class="p-8 text-center opacity-10 text-[9px]">
+        © 2026 Gofile.io クラウド
     </footer>
 
 </body>
